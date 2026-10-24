@@ -1,0 +1,24 @@
+name: Deploy to Public Repo
+
+on:
+  push:
+    branches:
+      - main  # O la rama que uses (ej: master)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código privado
+        uses: actions/checkout@v4
+
+      - name: Desplegar hacia el repositorio público
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
+        with:
+          source-directory: '.'
+          destination-github-username: 'BodegonPos'
+          destination-repository-name: 'Bodegon_web'
+          user-email: 'bodegonpos@gmail.com'
+          target-branch: 'main'

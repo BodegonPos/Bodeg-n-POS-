@@ -19,6 +19,6 @@ jobs:
         with:
           source-directory: '.'
           destination-github-username: 'Bodegon_Pos'
-          destination-repository-name: 'Bodeg_web'
+          destination-repository-name: 'Bodegon_web'
           user-email: 'bodegonpos@gmail.com'
           target-branch: 'main'

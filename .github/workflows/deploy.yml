@@ -3,7 +3,7 @@ name: Deploy to Public Repo
 on:
   push:
     branches:
-      - main  # O la rama que uses (ej: master)
+      - main
 
 jobs:
   publish:
@@ -18,7 +18,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
         with:
           source-directory: '.'
-          destination-github-username: 'Bodegon_web'
-          destination-repository-name: 'Bodegon_POS'
+          destination-github-username: 'BodegonPos'
+          destination-repository-name: 'Bodeg-n_web'
           user-email: 'bodegonpos@gmail.com'
           target-branch: 'main'

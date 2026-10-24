@@ -18,7 +18,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
         with:
           source-directory: '.'
-          destination-github-username: 'BodegonPos'
-          destination-repository-name: 'Bodeg-n_web'
+          destination-github-username: 'Bodegon_Pos'
+          destination-repository-name: 'Bodeg_web'
           user-email: 'bodegonpos@gmail.com'
           target-branch: 'main'
